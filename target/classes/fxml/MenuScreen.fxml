@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.skrzydlowski.bookstore.controllers.MenuController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#generateData" text="Generuj" />
+      <ScrollPane prefHeight="150.0" prefWidth="200.0">
+         <content>
+            <VBox fx:id="vBoxCustomers" prefHeight="1000.0" prefWidth="580.0" />
+         </content>
+      </ScrollPane>
+      <ComboBox fx:id="typeBox" onAction="#typeBoxAction" prefWidth="150.0" />
+      <ScrollPane prefHeight="150.0" prefWidth="200.0">
+         <content>
+            <VBox fx:id="vBoxBooks" prefHeight="1000.0" prefWidth="580.0" />
+         </content>
+      </ScrollPane>
+      <Label text="Wypożyczenia" />
+      <ScrollPane prefHeight="150.0" prefWidth="200.0">
+         <content>
+            <VBox fx:id="vBoxLoans" prefHeight="1000.0" prefWidth="580.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

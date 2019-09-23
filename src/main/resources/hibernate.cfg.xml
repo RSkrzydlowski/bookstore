@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Connection settings -->
+		<!-- I removed all data -->
+		<property name="hibernate.connection.driver_class"></property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.url"></property>
+		<property name="hibernate.connection.username"></property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<!-- Print executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create all database on startup -->
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+		<!-- Annotated entity classes -->
+		<mapping class="pl.skrzydlowski.bookstore.entity.Address" />
+		<mapping class="pl.skrzydlowski.bookstore.entity.Contact" />
+		<mapping class="pl.skrzydlowski.bookstore.entity.Customer" />
+		<mapping class="pl.skrzydlowski.bookstore.entity.BookInformation" />
+		<mapping class="pl.skrzydlowski.bookstore.entity.Books" />
+		<mapping class="pl.skrzydlowski.bookstore.entity.Loan" />
+		
+	</session-factory>
+</hibernate-configuration>
